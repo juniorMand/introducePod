@@ -11,29 +11,18 @@ import UIKit
 
 class Main: UIViewController {
     
-    var tableTitles = ["1. Magnetic Library"]
+    var tableTitles = ["1. Magnetic Library", "2. SwiftyJSON"]
+    var storyboardIds = ["magneticCocoaPods", "SwiftyJSONCocoaPods"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        guard let segueIdentifier = segue.identifier else {
-            print("error")
-            return
-        }
-        
-        switch segueIdentifier {
-        case "segue magnetic": break
-        default: break
-        }
-        
-
-    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
 }
 
 extension Main: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableTitles.count
     }
@@ -47,6 +36,11 @@ extension Main: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: storyboardIds[indexPath.row])
+        self.navigationController?.pushViewController(controller, animated: true)
+                
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

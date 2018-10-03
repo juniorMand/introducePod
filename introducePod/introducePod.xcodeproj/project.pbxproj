@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44946777CF2DAE03766BAA86 /* Pods_introducePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14FF77422D8CA109EDC4FBA /* Pods_introducePod.framework */; };
+		E43915C521650366003B5C8A /* SwiftyJSONCocoaPods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43915C421650366003B5C8A /* SwiftyJSONCocoaPods.swift */; };
 		E4443AF9215C8155004C92E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4443AF8215C8155004C92E1 /* AppDelegate.swift */; };
 		E4443AFB215C8155004C92E1 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4443AFA215C8155004C92E1 /* Main.swift */; };
 		E4443AFE215C8155004C92E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4443AFC215C8155004C92E1 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0E4E541041F4A33A13769730 /* Pods-introducePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-introducePod.release.xcconfig"; path = "Pods/Target Support Files/Pods-introducePod/Pods-introducePod.release.xcconfig"; sourceTree = "<group>"; };
 		CE9B5C6C529BC343F28EB37C /* Pods-introducePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-introducePod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-introducePod/Pods-introducePod.debug.xcconfig"; sourceTree = "<group>"; };
+		E43915C421650366003B5C8A /* SwiftyJSONCocoaPods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONCocoaPods.swift; sourceTree = "<group>"; };
 		E4443AF5215C8155004C92E1 /* introducePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = introducePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4443AF8215C8155004C92E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4443AFA215C8155004C92E1 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E43915C32165034D003B5C8A /* SwiftyJSONCocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				E43915C421650366003B5C8A /* SwiftyJSONCocoaPods.swift */,
+			);
+			path = SwiftyJSONCocoaPods;
+			sourceTree = "<group>";
+		};
 		E4443AEC215C8155004C92E1 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		E4443AF7215C8155004C92E1 /* introducePod */ = {
 			isa = PBXGroup;
 			children = (
+				E43915C32165034D003B5C8A /* SwiftyJSONCocoaPods */,
 				E48829CA215D170500E25E84 /* MagneticViewCocoaPods */,
 				E4443AFA215C8155004C92E1 /* Main.swift */,
 				E4443AFC215C8155004C92E1 /* Main.storyboard */,
@@ -194,10 +205,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-introducePod/Pods-introducePod-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Magnetic/Magnetic.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Magnetic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,6 +227,7 @@
 				E4443AFB215C8155004C92E1 /* Main.swift in Sources */,
 				E4443AF9215C8155004C92E1 /* AppDelegate.swift in Sources */,
 				E48829CC215D172100E25E84 /* MagneticCocoaPods.swift in Sources */,
+				E43915C521650366003B5C8A /* SwiftyJSONCocoaPods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

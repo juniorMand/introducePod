@@ -6,8 +6,8 @@ target 'introducePod' do
   
   use_frameworks!
   pod 'Magnetic'
+  pod 'SwiftyJSON'
   
-
   # Pods for introducePod
 
 end

@@ -63,7 +63,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="nGL-pD-fE0" id="LOi-l3-2Zi"/>
-                                            <segue destination="CXf-gY-UY5" kind="show" identifier="segue magnetic" id="idQ-Af-ZCJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,15 +83,35 @@
                         <viewLayoutGuide key="safeArea" id="mey-Yb-OT1"/>
                     </view>
                     <navigationItem key="navigationItem" title="CocoaPods List" id="xmq-XB-8QW"/>
+                    <connections>
+                        <segue destination="CXf-gY-UY5" kind="show" identifier="segue magnetic view" id="kNl-YL-jMe"/>
+                        <segue destination="S6H-6J-bJo" kind="show" identifier="segue swiftyjson" id="CWv-OO-SYZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrC-MO-OoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159" y="-2"/>
         </scene>
+        <!--SwiftyJSON-->
+        <scene sceneID="DOa-YJ-j8O">
+            <objects>
+                <viewController storyboardIdentifier="SwiftyJSONCocoaPods" id="S6H-6J-bJo" customClass="SwiftyJSONCocoaPods" customModule="introducePod" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esE-JV-xjT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4hk-Ss-G3R"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SwiftyJSON" id="gAm-zB-6P6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lh-oN-X5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="77"/>
+        </scene>
         <!--Magnetic View-->
         <scene sceneID="z12-uA-h6t">
             <objects>
-                <viewController id="CXf-gY-UY5" customClass="MagneticCocoaPods" customModule="introducePod" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="magneticCocoaPods" id="CXf-gY-UY5" customClass="MagneticCocoaPods" customModule="introducePod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xrv-4F-auG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
