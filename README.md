@@ -2,6 +2,7 @@
 
 ##Descritpion
 iOS의 dependency manager인 CocoaPods의 간단한 소개와 사용법을 설명하는 저장소 입니다.
+<<<<<<< HEAD
 
 #####CocoaPods List
  - [x]1.Magnetic
@@ -19,4 +20,5 @@ iOS의 dependency manager인 CocoaPods의 간단한 소개와 사용법을 설�
 
 ##관련 URL
 
-[Youtube](https://www.youtube.com/channel/UC2Kr9HxPsZ8GEQ7gwKB72Nw)
+#####유튜브
+https://www.youtube.com/channel/UC2Kr9HxPsZ8GEQ7gwKB72Nw
