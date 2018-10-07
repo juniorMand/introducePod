@@ -1,8 +1,8 @@
+
 #Introduce CocoaPods
 
 ##Descritpion
 iOS의 dependency manager인 CocoaPods의 간단한 소개와 사용법을 설명하는 저장소 입니다.
-<<<<<<< HEAD
 
 #####CocoaPods List
  - [x]1.Magnetic
