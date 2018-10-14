@@ -5,7 +5,7 @@ iOS의 dependency manager인 CocoaPods의 간단한 소개와 사용법을 설�
 
 ##### CocoaPods List
  - [x]1.Magnetic
- - [ ]2.SwiftyJSON
+ - [x]2.SwiftyJSON
  - [ ]3.TextFieldEffects
 
 ##### Library URL
