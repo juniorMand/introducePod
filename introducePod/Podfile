@@ -7,6 +7,7 @@ target 'introducePod' do
   use_frameworks!
   pod 'Magnetic'
   pod 'SwiftyJSON'
+  pod 'TextFieldEffects'
   
   # Pods for introducePod
 

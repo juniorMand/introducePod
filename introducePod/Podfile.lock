@@ -1,20 +1,24 @@
 PODS:
   - Magnetic (2.0.9)
   - SwiftyJSON (4.2.0)
+  - TextFieldEffects (1.5.0)
 
 DEPENDENCIES:
   - Magnetic
   - SwiftyJSON
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Magnetic
     - SwiftyJSON
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Magnetic: a2eacd0bdc145e28d9800d9d08050679c628bad3
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  TextFieldEffects: bf9e9cac7cb1a97d632fbcd0724bb6347dd86633
 
-PODFILE CHECKSUM: 01a0c508a23392ea80dde7a70dadfa0a770e0464
+PODFILE CHECKSUM: f1c3b782bd132cd748a444bc5382fecea669faf5
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.0.beta.1

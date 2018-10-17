@@ -11,8 +11,8 @@ import UIKit
 
 class Main: UIViewController {
     
-    var tableTitles = ["1. Magnetic Library", "2. SwiftyJSON"]
-    var storyboardIds = ["magneticCocoaPods", "SwiftyJSONCocoaPods"]
+    var tableTitles = ["1. Magnetic Library", "2. SwiftyJSON", "3. TextFieldEffects"]
+    var storyboardIds = ["magneticCocoaPods", "SwiftyJSONCocoaPods", "textFieldEffectsCocoaPods"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

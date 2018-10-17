@@ -14,6 +14,7 @@
 		E4443AFE215C8155004C92E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4443AFC215C8155004C92E1 /* Main.storyboard */; };
 		E4443B00215C8156004C92E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4443AFF215C8156004C92E1 /* Assets.xcassets */; };
 		E4443B03215C8156004C92E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4443B01215C8156004C92E1 /* LaunchScreen.storyboard */; };
+		E45115D121776044006CE9A1 /* TextFieldEffectsCocoaPods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45115D021776044006CE9A1 /* TextFieldEffectsCocoaPods.swift */; };
 		E48829CC215D172100E25E84 /* MagneticCocoaPods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48829CB215D172100E25E84 /* MagneticCocoaPods.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		E4443AFF215C8156004C92E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4443B02215C8156004C92E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4443B04215C8156004C92E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E45115D021776044006CE9A1 /* TextFieldEffectsCocoaPods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffectsCocoaPods.swift; sourceTree = "<group>"; };
 		E48829CB215D172100E25E84 /* MagneticCocoaPods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagneticCocoaPods.swift; sourceTree = "<group>"; };
 		F14FF77422D8CA109EDC4FBA /* Pods_introducePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_introducePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 		E4443AF7215C8155004C92E1 /* introducePod */ = {
 			isa = PBXGroup;
 			children = (
+				E45115CF2177602A006CE9A1 /* TextFieldEffectsCocoaPods */,
 				E43915C32165034D003B5C8A /* SwiftyJSONCocoaPods */,
 				E48829CA215D170500E25E84 /* MagneticViewCocoaPods */,
 				E4443AFA215C8155004C92E1 /* Main.swift */,
@@ -91,6 +94,14 @@
 				E4443B04215C8156004C92E1 /* Info.plist */,
 			);
 			path = introducePod;
+			sourceTree = "<group>";
+		};
+		E45115CF2177602A006CE9A1 /* TextFieldEffectsCocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				E45115D021776044006CE9A1 /* TextFieldEffectsCocoaPods.swift */,
+			);
+			path = TextFieldEffectsCocoaPods;
 			sourceTree = "<group>";
 		};
 		E48829CA215D170500E25E84 /* MagneticViewCocoaPods */ = {
@@ -203,18 +214,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-introducePod/Pods-introducePod-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-introducePod/Pods-introducePod-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Magnetic/Magnetic.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Magnetic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-introducePod/Pods-introducePod-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-introducePod/Pods-introducePod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -224,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45115D121776044006CE9A1 /* TextFieldEffectsCocoaPods.swift in Sources */,
 				E4443AFB215C8155004C92E1 /* Main.swift in Sources */,
 				E4443AF9215C8155004C92E1 /* AppDelegate.swift in Sources */,
 				E48829CC215D172100E25E84 /* MagneticCocoaPods.swift in Sources */,

@@ -33,32 +33,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VAO-na-KWD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VAO-na-KWD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableView" rowHeight="50" id="tDE-rk-Y2Y" customClass="MainCell" customModule="introducePod" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tDE-rk-Y2Y" id="xm3-CW-lIp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tDE-rk-Y2Y" id="xm3-CW-lIp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGL-pD-fE0">
-                                                    <rect key="frame" x="20" y="0.0" width="42" height="50.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="42" height="49.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="NHb-Rg-a1h"/>
+                                                        <constraint firstAttribute="height" constant="49.5" id="AQl-AG-Fua"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-YC-mxu">
+                                                    <rect key="frame" x="20" y="49.5" width="355" height="0.5"/>
+                                                    <color key="backgroundColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="Mjk-Vi-mr3"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="nGL-pD-fE0" secondAttribute="bottom" id="16J-3e-UQR"/>
-                                                <constraint firstItem="nGL-pD-fE0" firstAttribute="leading" secondItem="xm3-CW-lIp" secondAttribute="leading" constant="20" id="5HU-r5-8kW"/>
-                                                <constraint firstItem="nGL-pD-fE0" firstAttribute="top" secondItem="xm3-CW-lIp" secondAttribute="top" id="r4E-FY-TNW"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nGL-pD-fE0" secondAttribute="trailing" constant="20" id="ryx-n1-vxo"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nGL-pD-fE0" secondAttribute="trailing" constant="20" id="1HN-78-Fgm"/>
+                                                <constraint firstAttribute="trailing" secondItem="d9X-YC-mxu" secondAttribute="trailing" id="47V-RB-LkY"/>
+                                                <constraint firstItem="nGL-pD-fE0" firstAttribute="leading" secondItem="xm3-CW-lIp" secondAttribute="leading" constant="20" id="5uI-8C-I2i"/>
+                                                <constraint firstItem="nGL-pD-fE0" firstAttribute="top" secondItem="xm3-CW-lIp" secondAttribute="top" id="BMn-w9-mwV"/>
+                                                <constraint firstItem="d9X-YC-mxu" firstAttribute="leading" secondItem="xm3-CW-lIp" secondAttribute="leading" constant="20" id="Jqn-rd-Tz2"/>
+                                                <constraint firstItem="d9X-YC-mxu" firstAttribute="top" secondItem="nGL-pD-fE0" secondAttribute="bottom" id="baz-Ro-a11"/>
+                                                <constraint firstAttribute="bottom" secondItem="d9X-YC-mxu" secondAttribute="bottom" id="vRP-Hw-vJ4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -86,11 +96,12 @@
                     <connections>
                         <segue destination="CXf-gY-UY5" kind="show" identifier="segue magnetic view" id="kNl-YL-jMe"/>
                         <segue destination="S6H-6J-bJo" kind="show" identifier="segue swiftyjson" id="CWv-OO-SYZ"/>
+                        <segue destination="pVD-x3-xhu" kind="show" identifier="segueTextfieldEffects" id="byX-KP-jHr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrC-MO-OoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="-2"/>
+            <point key="canvasLocation" x="157.59999999999999" y="-2.2488755622188905"/>
         </scene>
         <!--SwiftyJSON-->
         <scene sceneID="DOa-YJ-j8O">
@@ -107,6 +118,339 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lh-oN-X5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1224" y="77"/>
+        </scene>
+        <!--TextFieldEffects-->
+        <scene sceneID="H3H-cW-y7p">
+            <objects>
+                <tableViewController storyboardIdentifier="textFieldEffectsCocoaPods" id="pVD-x3-xhu" customClass="TextFieldEffectsCocoaPods" customModule="introducePod" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QhT-8W-fnn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection headerTitle="Kaede TextField" id="Zfy-pg-gVa">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="sbB-xp-FkY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sbB-xp-FkY" id="rx2-99-oSD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGi-uu-Q5W" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.23624062539999999" green="0.84711521860000005" blue="0.68399441240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                            <color key="value" red="0.23529411759999999" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fGi-uu-Q5W" firstAttribute="leading" secondItem="rx2-99-oSD" secondAttribute="leadingMargin" constant="-8" id="HpR-a0-mKx"/>
+                                                <constraint firstItem="fGi-uu-Q5W" firstAttribute="top" secondItem="rx2-99-oSD" secondAttribute="topMargin" constant="-8" id="cqI-0E-Szx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fGi-uu-Q5W" secondAttribute="bottom" constant="-8" id="kgh-Fp-OOi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fGi-uu-Q5W" secondAttribute="trailing" constant="-8" id="sTg-6B-ewi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Hoshi TextField" id="nmC-Fo-RO4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="SLY-JX-uRc">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SLY-JX-uRc" id="BA8-9f-dZb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-gb-Pda" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" red="0.23529411759999999" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.23624062539999999" green="0.84711521860000005" blue="0.68399441240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PH7-gb-Pda" secondAttribute="trailing" constant="-8" id="Otl-Ym-Lid"/>
+                                                <constraint firstItem="PH7-gb-Pda" firstAttribute="top" secondItem="BA8-9f-dZb" secondAttribute="topMargin" constant="-8" id="S7k-IM-CIZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PH7-gb-Pda" secondAttribute="bottom" constant="-8" id="icd-fQ-VYE"/>
+                                                <constraint firstItem="PH7-gb-Pda" firstAttribute="leading" secondItem="BA8-9f-dZb" secondAttribute="leadingMargin" constant="-8" id="l93-uh-Wbn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Jiro TextField" id="e9E-v4-f2v">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="zOW-M6-VBE">
+                                        <rect key="frame" x="0.0" y="204" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zOW-M6-VBE" id="kBp-LY-pOq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldu-Xg-paw" customClass="JiroTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.23624062539999999" green="0.84711521860000005" blue="0.68399441240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ldu-Xg-paw" firstAttribute="leading" secondItem="kBp-LY-pOq" secondAttribute="leadingMargin" constant="-8" id="0Lo-eq-8qn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ldu-Xg-paw" secondAttribute="bottom" constant="-8" id="Bh1-Yc-hyb"/>
+                                                <constraint firstItem="Ldu-Xg-paw" firstAttribute="top" secondItem="kBp-LY-pOq" secondAttribute="topMargin" constant="-8" id="F1m-ZG-Ivq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ldu-Xg-paw" secondAttribute="trailing" constant="-8" id="yzk-zo-CYL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Isao TextField" id="Eyb-i1-G1w">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="uJq-33-rUk">
+                                        <rect key="frame" x="0.0" y="292" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uJq-33-rUk" id="C4J-yJ-ddU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="65a-dT-ZTp" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                            <color key="value" red="0.23529411759999999" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                            <color key="value" red="0.88550666359999997" green="0.1935084125" blue="0.47612177030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="65a-dT-ZTp" firstAttribute="top" secondItem="C4J-yJ-ddU" secondAttribute="topMargin" constant="-8" id="0Dj-TO-sa5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="65a-dT-ZTp" secondAttribute="trailing" constant="-8" id="Mfk-lz-rAr"/>
+                                                <constraint firstItem="65a-dT-ZTp" firstAttribute="leading" secondItem="C4J-yJ-ddU" secondAttribute="leadingMargin" constant="-8" id="aPW-HW-zyn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="65a-dT-ZTp" secondAttribute="bottom" constant="-8" id="iEu-LL-gPG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Minoru TextField" id="sZQ-La-fJb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="aGQ-AD-G2W">
+                                        <rect key="frame" x="0.0" y="380" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aGQ-AD-G2W" id="LUP-cs-vdY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-RB-Hby" customClass="MinoruTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.88550666359999997" green="0.1935084125" blue="0.47612177030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bwh-RB-Hby" secondAttribute="bottom" constant="-8" id="5zr-Gd-foH"/>
+                                                <constraint firstItem="Bwh-RB-Hby" firstAttribute="leading" secondItem="LUP-cs-vdY" secondAttribute="leadingMargin" constant="-8" id="Mna-DP-ZwJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bwh-RB-Hby" secondAttribute="trailing" constant="-8" id="m4r-tw-1eg"/>
+                                                <constraint firstItem="Bwh-RB-Hby" firstAttribute="top" secondItem="LUP-cs-vdY" secondAttribute="topMargin" constant="-8" id="vOF-g4-Yuy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Yoko TextField" id="lKb-TN-QID">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="MoY-QF-19j">
+                                        <rect key="frame" x="0.0" y="468" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MoY-QF-19j" id="PJb-go-Ytu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSR-bn-yNG" customClass="YokoTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.88550666359999997" green="0.1935084125" blue="0.47612177030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                            <color key="value" red="0.23624062539999999" green="0.84711521860000005" blue="0.68399441240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PSR-bn-yNG" secondAttribute="bottom" constant="-8" id="SwJ-Ov-Dtm"/>
+                                                <constraint firstItem="PSR-bn-yNG" firstAttribute="top" secondItem="PJb-go-Ytu" secondAttribute="topMargin" constant="-8" id="ago-5t-Yl8"/>
+                                                <constraint firstItem="PSR-bn-yNG" firstAttribute="leading" secondItem="PJb-go-Ytu" secondAttribute="leadingMargin" constant="-8" id="td2-l4-Nv6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PSR-bn-yNG" secondAttribute="trailing" constant="-8" id="ydb-A0-W0U"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Madoka TextField" id="XvP-W0-6Cq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="9Yl-Te-ue2">
+                                        <rect key="frame" x="0.0" y="556" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Yl-Te-ue2" id="VuO-dl-2Ts">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Detail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="to1-RI-XCV" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="8" y="3" width="359" height="54"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.23624062539999999" green="0.84711521860000005" blue="0.68399441240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.23529411759999999" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="to1-RI-XCV" firstAttribute="top" secondItem="VuO-dl-2Ts" secondAttribute="topMargin" constant="-8" id="0tT-q7-HUp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="to1-RI-XCV" secondAttribute="bottom" constant="-8" id="9VL-uo-DoC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="to1-RI-XCV" secondAttribute="trailing" constant="-8" id="P2F-AP-Fbc"/>
+                                                <constraint firstItem="to1-RI-XCV" firstAttribute="leading" secondItem="VuO-dl-2Ts" secondAttribute="leadingMargin" constant="-8" id="Ubc-YF-0Zb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Akira TextField" id="w5k-bY-a7t">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="Uxi-Pr-gB2">
+                                        <rect key="frame" x="0.0" y="644" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uxi-Pr-gB2" id="5c1-JP-dcs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hobby" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oye-Wt-LBf" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oye-Wt-LBf" firstAttribute="top" secondItem="5c1-JP-dcs" secondAttribute="topMargin" constant="-8" id="1Kf-uk-BEM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oye-Wt-LBf" secondAttribute="bottom" constant="-8" id="4e5-y8-SH7"/>
+                                                <constraint firstItem="oye-Wt-LBf" firstAttribute="leading" secondItem="5c1-JP-dcs" secondAttribute="leadingMargin" constant="-8" id="bJe-iH-jyv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oye-Wt-LBf" secondAttribute="trailing" constant="-8" id="n9w-cM-gUP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Yoshiko" id="6sR-Mh-eBT">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="FRS-Hp-bFY">
+                                        <rect key="frame" x="0.0" y="732" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FRS-Hp-bFY" id="mMK-V3-DaR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Money" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-0q-LrJ" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                            <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                                            <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                                            <color key="value" red="0.23529411759999999" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.23624062539999999" green="0.84711521860000005" blue="0.68399441240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hY5-0q-LrJ" secondAttribute="bottom" constant="-8" id="YQ0-TX-vnB"/>
+                                                <constraint firstItem="hY5-0q-LrJ" firstAttribute="leading" secondItem="mMK-V3-DaR" secondAttribute="leadingMargin" constant="-8" id="dyb-zn-vvS"/>
+                                                <constraint firstItem="hY5-0q-LrJ" firstAttribute="top" secondItem="mMK-V3-DaR" secondAttribute="topMargin" constant="-8" id="h8i-Pw-oI4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hY5-0q-LrJ" secondAttribute="trailing" constant="-8" id="vdP-eF-3s5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pVD-x3-xhu" id="Wbj-z0-j3Z"/>
+                            <outlet property="delegate" destination="pVD-x3-xhu" id="Zpd-VW-HUz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TextFieldEffects" id="amB-82-hdp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5R-5X-q80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="783"/>
         </scene>
         <!--Magnetic View-->
         <scene sceneID="z12-uA-h6t">
